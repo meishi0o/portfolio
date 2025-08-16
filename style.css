@@ -1,0 +1,121 @@
+body {
+  font-family: 'Poppins', sans-serif;
+  margin: 0;
+  padding: 0;
+  color: #161616;
+  background: #fefefe;
+  padding-top: 100px; /* match large header height */
+}
+
+/* Header */
+header {
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  background: #ffffff;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 20px 50px; /* more spacing at top */
+  transition: all 0.3s ease;
+  z-index: 1000;
+}
+
+/* Logo */
+.logo {
+  height: 100px;
+  width: auto;
+  margin-left: 20px;
+  transition: height 0.3s ease;
+}
+
+/* Shrunk state */
+header.shrink {
+  padding: 5px 50px; /* less padding when scrolled */
+}
+header.shrink .logo {
+  height: 60px;
+}
+
+/* Navigation */
+nav a {
+  padding-right: 40px;
+  text-decoration: none;
+  color: rgb(91, 129, 88);
+  font-weight: 500;
+}
+nav a:hover {
+  color: black;
+}
+
+/* Sections */
+section {
+  padding: 40px 20px;
+  max-width: 1300px;
+  margin: auto;
+}
+
+/* About */
+#about {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 60px 20px;
+  gap: 2rem;
+  max-width: 1200px;
+  margin: auto;
+}
+.about-text {
+  flex: 1;
+}
+.about-text h2 {
+  font-size: 2rem;
+  margin-bottom: 1rem;
+}
+.about-text p {
+  line-height: 1.6;
+}
+.about-images {
+  flex: 1;
+  display: flex;
+  justify-content: center;
+}
+.about-images img {
+  max-width: 300px;
+  border-radius: 8px;
+}
+
+/* Responsive */
+@media (max-width: 768px) {
+  #about {
+    flex-direction: column;
+    text-align: center;
+  }
+  .about-images {
+    margin-top: 20px;
+  }
+}
+
+/* Portfolio */
+.portfolio-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(250px, 1fr));
+  gap: 20px;
+}
+.project img {
+  width: 100%;
+  border-radius: 8px;
+  transition: transform 0.3s;
+}
+.project img:hover {
+  transform: scale(1.05);
+}
+
+/* Footer */
+footer {
+  background: #5db388;
+  color: white;
+  text-align: center;
+  padding: 20px;
+}
